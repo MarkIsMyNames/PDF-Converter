@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
 import pytest
 
@@ -17,10 +17,9 @@ from constants import (
     H2_BORDER,
     HR_BORDER_TOP,
 )
-from converter import find_scale_for_pages
 from convert_to_pdf import load_config
+from converter import find_scale_for_pages
 from style import build_css, build_html, scale_pt
-
 
 # ── Shared fixtures ────────────────────────────────────────────────────────────
 
@@ -144,7 +143,10 @@ class TestBuildHtml:
 
     def test_produces_valid_html_skeleton(self):
         html = build_html(body="<p>x</p>", css="")
-        for tag in ["<!DOCTYPE html>", "<html>", "</html>", "<head>", "</head>", "<body>", "</body>"]:
+        expected_tags = [
+            "<!DOCTYPE html>", "<html>", "</html>", "<head>", "</head>", "<body>", "</body>",
+        ]
+        for tag in expected_tags:
             assert tag in html
 
 

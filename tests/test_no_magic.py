@@ -69,7 +69,7 @@ class _MagicLiteralVisitor(ast.NodeVisitor):
         self._depth -= 1
 
     # Async functions follow the same rules.
-    visit_AsyncFunctionDef = visit_FunctionDef  # type: ignore[assignment]
+    visit_AsyncFunctionDef = visit_FunctionDef  # type: ignore[assignment]  # noqa: N815
 
     def visit_Subscript(self, node: ast.Subscript) -> None:
         """Visit the container but skip plain-string slice (dict-key access)."""

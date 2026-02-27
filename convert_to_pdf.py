@@ -5,9 +5,8 @@ from __future__ import annotations
 
 import argparse
 import sys
-from pathlib import Path
-
 import tomllib
+from pathlib import Path
 
 from constants import (
     CLI_ARG_CONFIG,
