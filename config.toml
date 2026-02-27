@@ -1,0 +1,31 @@
+[page]
+size   = "A4"
+margin = "1.4cm 1.8cm 1.4cm 1.8cm"
+# target_pages = 2  # uncomment to auto-scale font to hit this page count
+
+[markdown]
+extensions = ["tables"]
+
+[style.colors]
+body_text  = "#2C2218"
+background = "#FFFDF8"
+heading    = "#3A2D26"
+accent     = "#8A6B5A"
+rule       = "#D4C4B0"
+
+[style.fonts]
+body        = "'Helvetica Neue', Arial, sans-serif"
+heading     = "Georgia, serif"
+body_size   = "9.5pt"
+line_height = "1.45"
+h1_size     = "20pt"
+h2_size     = "11pt"
+
+[style.spacing]
+h1_margin        = "0 0 4px 0"
+h2_margin        = "10px 0 3px 0"
+p_margin         = "0 0 5px 0"
+ul_margin        = "3px 0 5px 0"
+ul_padding_left  = "18px"
+li_margin_bottom = "3px"
+hr_margin        = "8px 0"
